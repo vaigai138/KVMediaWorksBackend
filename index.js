@@ -5,17 +5,9 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables
 
-const allowedOrigins = ['http://localhost:5173', 'https://kvmediaworks.netlify.app'];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}));// Allow requests from frontend origin
+const app = express(); // Initialize Express application
+app.use(cors({ origin: 'http://localhost:5173' })); // from frontend origin
 app.use(bodyParser.json());
 
 // MongoDB connection URI from environment variable
