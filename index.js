@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:5173' })); // Allow requests from frontend origin
+app.use(cors({ origin: 'http://localhost:5173' ,'https://kvmediaworksbackend.onrender.com'})); // Allow requests from frontend origin
 app.use(bodyParser.json());
 
 // MongoDB connection URI from environment variable
