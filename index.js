@@ -8,7 +8,7 @@ require('dotenv').config(); // Load environment variables
 const app = express(); // Initialize Express application
 
 // Define allowed origins for CORS
-const allowedOrigins = ['http://localhost:5173', 'https://kvmediaworks.netlify.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://kvmediaworks.netlify.app','https://kvmediaworks.me'];
 
 app.use(cors({
   origin: function (origin, callback) {
